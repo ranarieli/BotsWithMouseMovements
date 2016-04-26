@@ -81,6 +81,7 @@ def pressAndRelease(char):
 
 if __name__ =="__main__":
     sleepShort()
+    print("This is a test 20:54")
     sleepShort()
     print("This is a test!")
     print("This is a test 20:53")
