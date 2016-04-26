@@ -81,3 +81,5 @@ def pressAndRelease(char):
 
 if __name__ =="__main__":
     sleepShort()
+    sleepShort()
+    print("This is a test!")
