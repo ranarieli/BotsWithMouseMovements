@@ -60,7 +60,24 @@ def ReleaseKey(hexKeyCode):
     x = Input( ctypes.c_ulong(1), ii_ )
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
+def rand():
+    t = random.random()
+    while(t<0.1 or t>0.7):
+        t = random.random()
+    return t
+
+def sleepShort():
+    time.sleep(rand())
+
+def dic(ch):
+    t = ch.encode("hex")
+    return int(t,16)
+
+def pressAndRelease(char):
+    hex = dic(char)
+    PressKey(hex)
+    sleepShort()
+    ReleaseKey(hex)
 
 if __name__ =="__main__":
-    print("test")
-    print("trying to open a new branch")
+    sleepShort()
